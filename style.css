@@ -1,0 +1,197 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Playwrite+AU+TAS:wght@100..400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ga Maamli", sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: "Ga Maamli", sans-serif;
+}
+
+p, li, a{
+    font-family: "Ga Maamli", sans-serif;
+    font-size: 1.9rem;
+    letter-spacing: .2em;
+    color: var(--text-color);
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+:root{
+    --main-color: #017909;
+    --support-sidebar-color: #818581;
+    --font-color: #2f3330;
+    --bg-color:#e7f6e8;
+    --text-color: #696c6a;
+}
+
+
+/* Start NAVBAR Container */
+body{
+   overflow-x: hidden;
+   background-color: var(--bg-color);
+}
+.container{
+    max-width: 100vw;
+    margin: 0 auto;
+}
+.section-navbar{
+    width: 100%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05), 4px 4px 10px rgba(0, 0, 0, 0.08);
+    position: fixed;
+    background-color: white;
+    z-index: 1;
+}
+.section-navbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbarLogin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section-navbar .navbar ul{
+    display: flex;
+    gap: 3.2rem;
+
+    & li a {
+        color: var(--main-color);
+        font-weight: 600;
+        font-size: 2.1rem;
+        display: inline-block;
+        position: relative;
+
+        &::after{
+            position: absolute;
+            content: "";
+            width: 0%;
+            border-bottom: 0.2rem solid #017909;
+            bottom: -0.2rem;
+            left: 0;
+            transition: all .3s linear;
+        }
+    }
+    & li a:hover:after{
+        width: 100%;
+    }
+}
+.section-navbar .navbarLogin ul{
+    display: flex;
+    gap: 3.2rem;
+
+    & li a {
+        color: var(--main-color);
+        font-weight: 600;
+        display: inline-block;
+        transition: all .3s linear;
+    }
+    & li a:hover{
+        transform: rotate(10deg);
+    }
+}
+/* End NAVBAR Container */
+/* Start Hero Container */
+.heroSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw; 
+    height: 80vh;
+}
+
+.heroSection .img-container {
+    width: 100vw; 
+    height: 80vh; 
+    margin-top: 0.5rem; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    position: relative;
+    margin-top: 89px;
+}
+
+.body-img {
+    width: auto; 
+    height: auto; 
+    max-width: 100%; 
+    max-height: 100%; 
+    display: block; 
+    margin: auto; 
+}
+/* End Hero Container */
+.plant{
+    display: flex;
+    animation-name: slider; 
+    animation-duration: 10s; 
+    animation-iteration-count: infinite; 
+    animation-timing-function: linear; 
+    animation-direction: normal; 
+    animation-play-state: running; 
+    animation-fill-mode: forwards; 
+    animation-delay: 0s;
+}
+@keyframes slider {
+    0% {
+        transform: translateX(0); 
+    }
+    100% {
+        transform: translateX(-100%); 
+    }
+}
+.store {
+    display: flex;
+    animation-name: storeSlider;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+}
+
+@keyframes storeSlider {
+    1000% {
+        transform: translateX(0); 
+    }
+    0% {
+        transform: translateX(-100%); 
+    }
+}
+.sell-container{
+    width: 400px;
+    height: 600px;
+    margin-top: 350px;
+ 
+}
+.sell1-container .sell1-container-img{
+    width: 400px;
+    height: 250px;
+    animation: rotateImage 5s linear infinite;
+}
+
+@keyframes rotateImage {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+
+/* order */
